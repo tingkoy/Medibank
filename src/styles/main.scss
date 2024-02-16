@@ -1,0 +1,378 @@
+// font here
+@font-face {
+  font-family: 'EC Regular';
+  src: url('../assets/font/EC_Regular.ttf');
+}
+
+@font-face {
+  font-family: 'EC Bold';
+  src: url('../assets/font/Euclid\ Circular\ A\ Bold.ttf');
+}
+
+@font-face {
+  font-family: 'EC Bold Italic';
+  src: url('../assets/font/Euclid\ Circular\ A\ Bold\ Italic.ttf');
+}
+
+@font-face {
+  font-family: 'EC Italic';
+  src: url('../assets/font/Euclid\ Circular\ A\ Italic.ttf');
+}
+
+@font-face {
+  font-family: 'EC Light';
+  src: url('../assets/font/Euclid\ Circular\ A\ Light.ttf');
+}
+
+@font-face {
+  font-family: 'EC Italic Italic';
+  src: url('../assets/font/Euclid\ Circular\ A\ Light\ Italic.ttf');
+}
+
+@font-face {
+  font-family: 'EC Medium';
+  src: url('../assets/font/Euclid\ Circular\ A\ Medium.ttf');
+}
+
+@font-face {
+  font-family: 'EC Medium Italic';
+  src: url('../assets/font/Euclid\ Circular\ A\ Medium\ Italic.ttf');
+}
+
+@font-face {
+  font-family: 'EC SemiBold';
+  src: url('../assets/font/Euclid\ Circular\ A\ SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'EC SemiBold Italic';
+  src: url('../assets/font/Euclid\ Circular\ A\ SemiBold\ Italic.ttf');
+}
+
+// ========
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.attract,
+.quad,
+.wrap_top_one,
+.wrap_top_two,
+.wrap_top_three,
+.wrap_bot_one,
+.wrap_bot_two,
+.wrap_bot_three {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.attract {
+  z-index: 10;
+  height: 100vh;
+  display: flex;
+  text-align: center;
+  font-family: 'EC Bold';
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(128, 128, 128, 0.486);
+}
+.btn{
+  position: absolute;
+  background: rgba(128, 128, 128, 0.596);
+  border: none;
+  font-family: 'EC Regular';
+}
+.quad {
+  // display: none;
+  z-index: 9;
+  width: 100vw;
+  height: 100vh;
+  background: #DD0822;
+}
+
+.q_title,
+.q_desc {
+  color: #ffffff;
+  position: relative;
+}
+
+.q_title {
+  font-family: 'EC Bold';
+}
+
+.q_desc {
+  font-family: 'EC Regular';
+}
+
+.boxes {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  // background: rgba(192, 192, 192, 0.616);
+}
+.btn_a{
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.boxImg{
+  position: absolute;
+}
+
+.captionHolder{
+  display: flex;
+  align-items: flex-end;
+  font-family: 'EC Bold';
+  position: relative;
+  bottom: 0;
+  width: 100vw;
+}
+.caption{
+  height: 2.5em;
+}
+.top_one,
+.top_two,
+.top_three,
+.bot_one,
+.bot_two,
+.bot_three{
+  overflow: hidden;
+}
+
+.wrap_top_one,
+.wrap_top_two,
+.wrap_top_three,
+.wrap_bot_one,
+.wrap_bot_two,
+.wrap_bot_three {
+  z-index: 8;
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide {
+  animation: fadeOut forwards 0.2s ease-in-out;
+}
+
+.show {
+  animation: fadeIn forwards 0.2s ease-in-out;
+}
+
+// guide
+.guided {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.guided img {
+  width: 100vw;
+  height: 100vh;
+}
+
+// 1080px
+@media screen and (min-width: 1920px) and (max-width: 1920px) and (min-height: 1080px) and (max-height: 1080px) {
+  .attract{
+    width: 58vw;
+  }
+  .attract,
+  .AL_msg{
+    font-size: 2.1em;
+  }
+  .AL_msg{
+    width: 13em;
+    transform: translateY(-1em);
+    line-height: 1.2em;
+  }
+  .btn {
+    bottom: 3.25em;
+    font-size: 1.9em;
+    width: 6.8em;
+    height: 2.5em;
+    border-radius: .4em;
+    transform: translateY(.85em);
+    animation: beat infinite 3s ease-in-out;
+  }
+  // .btn {
+  //   bottom: 2.75em;
+  //   font-size: 1.9em;
+  //   width: 8em;
+  //   height: 3.5em;
+  //   border-radius: .4em;
+  //   transform: translateY(.85em);
+  // }
+
+  // .bodyHandler{
+  //   position: absolute;
+  //   top: 2em;
+  //   right: 4em;
+  //   z-index: 11;
+  // }
+  // .bodyHandler img{
+  //   position: relative;
+  //   height: 64em;
+  //   width: auto;
+  // }
+
+
+  .bodyHandler{
+    position: absolute;
+    top: -22em;
+    right: 4em;
+    z-index: 11;
+  }
+  .bodyHandler img{
+    position: relative;
+    height: 138em;
+    width: auto;
+  }
+  
+
+  .q_title {
+    font-size: 5em;
+    top: .7em;
+    left: .9em;
+    letter-spacing: -.03em;
+  }
+
+  .q_desc {
+    font-size: 2em;
+    top: 1.9em;
+    left: 2.3em;
+    letter-spacing: .045em;
+  }
+  .boxes{
+    left: 3em;
+    bottom: 76px;
+    width: 62vw;
+    height: 72vh;
+  }
+  .captionHolder{
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0, 0.8));
+    padding-bottom: .8em;
+    padding-left: .8em;
+    font-size: 2.2em;
+    height: 7em;
+    display: flex;
+    color: #ffffff;
+  }
+  .top_one,
+  .top_two,
+  .top_three,
+  .bot_one,
+  .bot_two,
+  .bot_three {
+    width: 22.5em;
+    height: 22.5em;
+    border: solid .2em #ffffff;
+    border-radius: 1.5em;
+    margin: 0.9em;
+  }
+}
+
+// 4K
+@media screen and (min-width: 3840px) and (max-width: 3840px) and (min-height: 2160px) and (max-height: 2160px) {
+  .attract {
+      width: 58vw;
+    }
+  
+    .attract,
+    .AL_msg {
+      font-size: 3.1em;
+    }
+  
+    .AL_msg {
+      width: 13em;
+      transform: translateY(.1em);
+      line-height: 1.1em;
+    }
+  
+    .btn {
+      font-size: 2.8em;
+      width: 6.2em;
+      height: 2.2em;
+      border-radius: .4em;
+      transform: translateY(.8em);
+    }
+  // .bodyHandler{
+  //   position: absolute;
+  //   top: 4em;
+  //   right: 8em;
+  //   z-index: 11;
+  // }
+  // .bodyHandler img{
+  //   position: relative;
+  //   height: 128em;
+  //   width: auto;
+  // }
+
+
+  .bodyHandler{
+    position: absolute;
+    top: -44em;
+    right: 8em;
+    z-index: 11;
+  }
+  .bodyHandler img{
+    position: relative;
+    height: 274em;
+    width: auto;
+  }
+
+  .q_title {
+    font-size: 10em;
+    top: .7em;
+    left: .9em;
+    letter-spacing: -.03em;
+  }
+
+  .q_desc {
+    font-size: 4em;
+    top: 1.9em;
+    left: 2.3em;
+    letter-spacing: .045em;
+  }
+  .boxes{
+    left: 7em;
+    bottom: 145px;
+    width: 61vw;
+    height: 72vh;
+  }
+  .captionHolder {
+    background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0, 0.8));
+    padding-bottom: .8em;
+    padding-left: .8em;
+    font-size: 4.5em;
+    height: 7em;
+    display: flex;
+    color: #ffffff;
+  }
+  .top_one,
+  .top_two,
+  .top_three,
+  .bot_one,
+  .bot_two,
+  .bot_three {
+    width: 45.5em;
+    height: 45.5em;
+    border: solid .4em #ffffff;
+    border-radius: 1.5em;
+    margin: 1.5em;
+  }
+}
